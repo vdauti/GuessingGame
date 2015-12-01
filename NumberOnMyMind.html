@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number on My Mind</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+
+</head>
+<body>
+
+  <p>I am thinking of a number between 1 and 5 can you guess what it is?</p>
+  <input id="numberThought" />
+  <button id="yourAnswer">Submit your guess</button>
+
+<script type="text/javascript">
+
+  document.getElementById("yourAnswer").onclick=function guessedNumber(){
+  
+  var x=Math.random();
+
+  x=6*x;
+
+  x=Math.floor(x);
+
+  if (x==document.getElementById("numberThought").value) {
+
+    alert("Good Guess! My number is"+x);
+    
+  } else{
+
+    alert("Better Luck Next Time! My number was" + x);
+    
+  }
+
+
+}
+
+
+</script>
+</body>
+</html>
